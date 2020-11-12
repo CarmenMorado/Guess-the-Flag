@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v3J-a1-6N8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDT-8B-jhG">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oDT-8B-jhG" secondAttribute="height" multiplier="2:1" id="LPC-C5-HBk"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8o-6L-bvH"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twZ-C3-SfO">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="twZ-C3-SfO" secondAttribute="height" multiplier="2:1" id="XZG-kl-YG0"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ES-JS-K7m"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-IN-cm8">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PeW-IN-cm8" secondAttribute="height" multiplier="2:1" id="Dvh-2K-GQQ"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmK-IV-BeW"/>
@@ -47,10 +56,13 @@
                         <viewLayoutGuide key="safeArea" id="TJr-Hq-xaZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TJr-Hq-xaZ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PeW-IN-cm8" secondAttribute="bottom" constant="20" id="0f9-4n-UNh"/>
                             <constraint firstItem="twZ-C3-SfO" firstAttribute="centerX" secondItem="oDT-8B-jhG" secondAttribute="centerX" id="Deh-8q-zQn"/>
                             <constraint firstItem="twZ-C3-SfO" firstAttribute="top" secondItem="oDT-8B-jhG" secondAttribute="bottom" constant="30" id="Gdo-OK-0Px"/>
+                            <constraint firstItem="twZ-C3-SfO" firstAttribute="height" secondItem="oDT-8B-jhG" secondAttribute="height" id="KBS-cC-03H"/>
                             <constraint firstItem="PeW-IN-cm8" firstAttribute="centerX" secondItem="twZ-C3-SfO" secondAttribute="centerX" id="YFs-GC-kVt"/>
                             <constraint firstItem="oDT-8B-jhG" firstAttribute="top" secondItem="TJr-Hq-xaZ" secondAttribute="top" constant="12" id="a0T-Oy-rd9"/>
+                            <constraint firstItem="PeW-IN-cm8" firstAttribute="height" secondItem="twZ-C3-SfO" secondAttribute="height" id="ff4-61-b7l"/>
                             <constraint firstItem="oDT-8B-jhG" firstAttribute="centerX" secondItem="TJr-Hq-xaZ" secondAttribute="centerX" id="jP9-Ye-AkB"/>
                             <constraint firstItem="PeW-IN-cm8" firstAttribute="top" secondItem="twZ-C3-SfO" secondAttribute="bottom" constant="30" id="waP-aP-ePY"/>
                         </constraints>
