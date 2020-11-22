@@ -12,4 +12,4 @@ In addition, I completed the following (part 3) challenges:
 And the following (project 3) challenge:
 -Go back to project 2 and add a bar button item that shows their score when tapped.
 
-![ezgif-4-9cfa5e0877b2](https://user-images.githubusercontent.com/42749527/99859615-87c9c680-2b5e-11eb-887d-b32d4fc45abe.gif)
+![ezgif-4-7bdd5caef710](https://user-images.githubusercontent.com/42749527/99893258-c25d5d00-2c4b-11eb-811d-d3230d5cc0d3.gif)
