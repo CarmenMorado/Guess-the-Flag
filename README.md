@@ -15,4 +15,7 @@ And the following (project 3) challenge:
 And the following (project 12) challenge:
 -Modify project 2 so that it saves the player’s highest score, and shows a special message if their new score beat the previous high score
 
-![ezgif-4-7bdd5caef710](https://user-images.githubusercontent.com/42749527/99893258-c25d5d00-2c4b-11eb-811d-d3230d5cc0d3.gif)
+And the following (project 15) challenge:
+-Go back to project 2 and make the flags scale down with a little bounce when pressed.
+
+![ezgif-3-574aff060ac0](https://user-images.githubusercontent.com/42749527/105642010-fffd8280-5e54-11eb-91f3-c019224494b7.gif)
