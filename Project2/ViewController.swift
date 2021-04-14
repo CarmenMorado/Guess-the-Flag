@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
@@ -34,6 +35,10 @@ class ViewController: UIViewController {
         askQuestion(action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Schedule", style: .plain, target: self, action: #selector(scheduleLocal))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(registerLocal))
         
         let defaults = UserDefaults.standard
         
@@ -136,6 +141,34 @@ class ViewController: UIViewController {
         let vc = UIActivityViewController(activityItems: ["Score: \(score)"], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
+    }
+    
+    @objc func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Yay!")
+            } else {
+                print("D'oh")
+            }
+        }
+    }
+    
+    @objc func scheduleLocal() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+
+        let content = UNMutableNotificationContent()
+        content.title = "Guess-the-Flag"
+        content.body = "Keep playing to improve your knowledge of country flags!"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 86400, repeats: true)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
     }
     
 
